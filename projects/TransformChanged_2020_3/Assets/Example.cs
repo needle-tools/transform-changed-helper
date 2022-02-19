@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Needle.TransformExtensions;
 using UnityEngine;
-using UnityEngine.TestTools;
 
 [ExecuteInEditMode]
 public class Example : MonoBehaviour
