@@ -20,6 +20,14 @@ namespace Needle.TransformExtensions
                 list.Add(val);
         }
 
+        public static void OnHasChangedUnsubscribe(this Transform t, Action callback, PlayerLoopEvent evt = PlayerLoopEvent.Update)
+        {
+            if (!registered.ContainsKey(evt)) return;
+            var list = registered[evt];
+            var val = (t, callback);
+            list.Remove(val);
+        }
+
         private const PlayerLoopEvent lastEvent = PlayerLoopEvent.PostLateUpdate;
 
 #if UNITY_EDITOR
